@@ -1,0 +1,5 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+echo "Hello from init!"
+exec /bin/sh   # ここを必要に応じて pivot_root⇒本番rootfs に変更
